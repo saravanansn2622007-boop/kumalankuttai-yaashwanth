@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaashwanth — Owner & Custodian of Kumalankuttai, Erode | Official Location Portfolio</title>
+  <meta name="description" content="Official Personal & Geographic Portfolio of Yaashwanth — Owner, Patron, and Chief Custodian of Kumalankuttai, Erode, Tamil Nadu. Complete geographic dossier, landmarks, and smart development vision.">
+  <meta name="keywords" content="Yaashwanth, Kumalankuttai, Erode, Kumalankuttai Erode, Perundurai Road, Kumalankuttai Lake, Erode District, Yaashwanth Kumalankuttai Owner">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#E5B842',
+              darkgold: '#B8860B',
+              lightgold: '#FDF0CD',
+              navy: '#09122C',
+              darknavy: '#050A18',
+              royal: '#172B4D',
+              slate: '#1E293B',
+              emerald: '#10B981',
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            geo: ['"Space Grotesk"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Leaflet CSS for Geographic Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#050A18] text-slate-100 antialiased selection:bg-amber-400 selection:text-slate-950">
+
+  <!-- Reading Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- Top Geolocation & Live Telemetry Bar -->
+  <div class="bg-gradient-to-r from-amber-600/90 via-slate-950 to-blue-900/90 text-xs text-slate-200 py-1.5 px-4 border-b border-amber-500/30">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 font-bold tracking-wider uppercase text-[11px] text-amber-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          GEOGRAPHIC PORTFOLIO
+        </span>
+        <span class="hidden md:inline text-slate-500">|</span>
+        <span class="hidden md:inline text-slate-300 font-mono text-[11px]">
+          <i class="fa-solid fa-location-dot text-amber-400 mr-1"></i>
+          77, Kumalankuttai, Selvam Nagar 5th St, Erode - 638011 &bull; <i class="fa-solid fa-phone text-emerald-400 ml-1 mr-1"></i> +91 8072 446 763
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="tel:+918072446763" class="hidden sm:inline-flex items-center gap-1.5 text-amber-300 font-mono hover:text-white bg-slate-900/80 px-2 py-0.5 rounded border border-amber-500/30">
+          <i class="fa-solid fa-phone-volume text-emerald-400"></i>
+          <span>+91 8072 446 763</span>
+        </a>
+        <div class="flex items-center gap-1.5 text-amber-200">
+          <i class="fa-regular fa-clock text-amber-400"></i>
+          <span id="liveDate">Thu, Oct 1, 2026</span>
+          <span class="text-slate-500">•</span>
+          <span id="liveClock" class="font-mono font-bold text-white">--:--:-- IST</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header id="mainNavbar" class="sticky top-0 z-50 bg-[#050A18]/85 backdrop-blur-md border-b border-slate-800/90 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand / Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 via-amber-600 to-amber-800 p-0.5 shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/40 transition">
+            <div class="w-full h-full bg-[#050A18] rounded-[14px] flex items-center justify-center border border-amber-400/40">
+              <span class="font-heading font-black text-amber-400 text-xl tracking-tighter">Y</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-heading font-extrabold tracking-wider text-xl text-white group-hover:text-amber-400 transition">
+                YAASHWANTH
+              </span>
+              <span class="text-[9px] uppercase font-bold tracking-widest bg-amber-500/10 text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded">
+                PATRON
+              </span>
+            </div>
+            <p class="text-[11px] text-slate-400 tracking-wide flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-amber-400 text-[10px]"></i>
+              <span class="text-slate-300 font-semibold">KUMALANKUTTAI</span>
+              <span class="text-slate-600">&bull;</span>
+              <span class="text-slate-400">Erode, Tamil Nadu</span>
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+          <a href="#hero" class="hover:text-amber-400 transition py-1">Portfolio</a>
+          <a href="#about-yaashwanth" class="hover:text-amber-400 transition py-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-user-check text-xs text-amber-400"></i>
+            <span>The Custodian</span>
+          </a>
+          <a href="#location-dossier" class="hover:text-amber-400 transition py-1 text-amber-300 font-semibold flex items-center gap-1.5">
+            <i class="fa-solid fa-compass text-xs text-amber-400"></i>
+            <span>Location Dossier</span>
+          </a>
+          <a href="#landmarks" class="hover:text-amber-400 transition py-1">Key Landmarks</a>
+          <a href="#mapSection" class="hover:text-amber-400 transition py-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-map text-xs text-blue-400"></i>
+            <span>Geo Map</span>
+          </a>
+          <a href="#transit" class="hover:text-amber-400 transition py-1">Transit Matrix</a>
+          <a href="#grievance" class="hover:text-amber-400 transition py-1">Citizen Desk</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button class="open-appointment-modal inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-500/30 transition">
+            <i class="fa-regular fa-handshake"></i>
+            <span>Connect</span>
+          </button>
+          <a href="#location-dossier" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 text-slate-950 shadow-md shadow-amber-500/20 transition">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <span>Explore Area</span>
+          </a>
+        </div>
+
+        <!-- Mobile Trigger -->
+        <div class="flex items-center lg:hidden">
+          <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="p-2.5 rounded-xl bg-slate-900 text-slate-300 border border-slate-800">
+            <i class="fa-solid fa-bars-staggered text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
+      <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+        <span class="text-xs font-bold uppercase text-amber-400">Navigation</span>
+        <button id="closeMobileMenuBtn" class="text-slate-400 p-1">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div class="grid grid-cols-1 gap-2 text-sm font-medium">
+        <a href="#hero" class="mobile-nav-link p-2 rounded-lg hover:bg-slate-900 text-slate-200">Portfolio Home</a>
+        <a href="#about-yaashwanth" class="mobile-nav-link p-2 rounded-lg hover:bg-slate-900 text-amber-300 font-semibold">About Yaashwanth</a>
+        <a href="#location-dossier" class="mobile-nav-link p-2 rounded-lg hover:bg-slate-900 text-white font-semibold">Location Dossier: Kumalankuttai</a>
+        <a href="#landmarks" class="mobile-nav-link p-2 rounded-lg hover:bg-slate-900 text-slate-200">Area Landmarks</a>
+        <a href="#mapSection" class="mobile-nav-link p-2 rounded-lg hover:bg-slate-900 text-slate-200">Interactive Geo Map</a>
+        <a href="#transit" class="mobile-nav-link p-2 rounded-lg hover:bg-slate-900 text-slate-200">Transit & Distance Matrix</a>
+        <a href="#grievance" class="mobile-nav-link p-2 rounded-lg hover:bg-slate-900 text-slate-200">Citizen Desk</a>
+        <a href="#contact" class="mobile-nav-link p-2 rounded-lg hover:bg-slate-900 text-slate-200">Office & Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: YAASHWANTH & KUMALANKUTTAI -->
+  <section id="hero" class="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden bg-grid-pattern">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-b from-amber-500/10 via-blue-600/5 to-transparent blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Personal Introduction & Location Designation -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-amber-500/40 text-xs font-mono text-amber-300 shadow-inner">
+            <span class="w-2 h-2 rounded-full bg-amber-400 radar-pulse"></span>
+            <span>PORTFOLIO & LOCATION DIRECTORY &bull; ERODE, TN</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-heading text-white leading-[1.15]">
+            YAASHWANTH
+            <span class="block text-2xl sm:text-3xl lg:text-4xl gold-gradient-text mt-2 font-sans font-black tracking-normal">
+              Owner & Custodian of Kumalankuttai
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+            Welcome to the official portfolio of <strong class="text-amber-400 font-bold">Yaashwanth</strong> — visionary patron and owner stewarding <strong class="text-white">Kumalankuttai</strong>, the prime commercial and transit heartbeat of Erode city along the iconic Perundurai Road (SH-96) corridor.
+          </p>
+
+          <!-- Core Geolocation Quick Facts -->
+          <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+            <div class="flex items-center justify-between pb-2 border-b border-slate-800 text-xs font-mono text-amber-400">
+              <span><i class="fa-solid fa-location-crosshairs mr-1.5"></i> PINPOINT GEOGRAPHY & RESIDENCE</span>
+              <a href="tel:+918072446763" class="text-emerald-400 font-bold hover:underline"><i class="fa-solid fa-phone mr-1"></i>+91 8072 446 763</a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+              <div>
+                <span class="text-slate-500 uppercase text-[10px] font-bold block">Executive Address</span>
+                <span class="text-white font-semibold">77, Selvam Nagar 5th St</span>
+              </div>
+              <div>
+                <span class="text-slate-500 uppercase text-[10px] font-bold block">Area & PIN</span>
+                <span class="text-amber-300 font-semibold">Kumalankuttai, 638011</span>
+              </div>
+              <div>
+                <span class="text-slate-500 uppercase text-[10px] font-bold block">Primary Corridor</span>
+                <span class="text-white font-semibold">Perundurai Highway</span>
+              </div>
+              <div>
+                <span class="text-slate-500 uppercase text-[10px] font-bold block">Direct Helpline</span>
+                <a href="tel:+918072446763" class="text-emerald-400 font-mono font-bold block hover:underline">+91 8072 446 763</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#location-dossier" class="px-6 py-3.5 rounded-xl font-bold text-sm tracking-wide bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 text-slate-950 shadow-lg shadow-amber-500/20 flex items-center gap-2.5 transition transform hover:-translate-y-0.5">
+              <i class="fa-solid fa-map-marked-alt text-base"></i>
+              <span>Explore Kumalankuttai Location</span>
+            </a>
+            
+            <a href="#about-yaashwanth" class="px-6 py-3.5 rounded-xl font-bold text-sm tracking-wide bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 flex items-center gap-2.5 transition">
+              <i class="fa-solid fa-user-tie text-amber-400"></i>
+              <span>About Yaashwanth</span>
+            </a>
+
+            <a href="#mapSection" class="px-4 py-3.5 rounded-xl font-semibold text-sm text-slate-300 hover:text-white flex items-center gap-2 transition">
+              <i class="fa-solid fa-compass text-blue-400"></i>
+              <span>Interactive Map</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Visual Showcase of Yaashwanth with Location Frame -->
+        <div class="lg:col-span-5">
+          <div class="relative max-w-md mx-auto">
+            
+            <!-- Glow background -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 via-blue-600 to-emerald-500 rounded-3xl blur-xl opacity-30"></div>
+
+            <div class="relative rounded-3xl bg-slate-950 border border-amber-500/40 overflow-hidden shadow-2xl">
+              
+              <!-- Header Bar on Card -->
+              <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 py-2 px-4 flex items-center justify-between text-slate-950 font-black text-xs uppercase tracking-wider">
+                <span class="flex items-center gap-1.5">
+                  <i class="fa-solid fa-crown text-[11px]"></i>
+                  CHIEF AREA PATRON
+                </span>
+                <span class="font-mono text-[10px] bg-slate-950 text-amber-300 px-2 py-0.5 rounded">
+                  KUMALANKUTTAI
+                </span>
+              </div>
+
+              <!-- Main Hero Photo: Close-Up Portrait -->
+              <div class="p-5 space-y-4">
+                <div class="relative group cursor-pointer overflow-hidden rounded-2xl border-2 border-amber-500/50 bg-slate-900 shadow-xl">
+                  <img src="assets/images/yaashwanth-closeup.png" 
+                       alt="Yaashwanth — Owner, Patron and Visionary Custodian of Kumalankuttai, Erode" 
+                       class="w-full h-80 sm:h-96 object-cover object-top filter brightness-[1.03] contrast-[1.04] transition duration-500 group-hover:scale-105 lightbox-trigger">
+                  
+                  <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent p-4">
+                    <span class="inline-block text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-2 py-0.5 rounded-full mb-1">
+                      <i class="fa-solid fa-shield-check"></i> Sole Area Custodian
+                    </span>
+                    <h3 class="text-2xl font-black text-white tracking-wide font-heading">YAASHWANTH</h3>
+                    <p class="text-xs text-amber-300 font-medium">Patron of Kumalankuttai, Erode District</p>
+                  </div>
+
+                  <div class="absolute top-3 right-3 bg-slate-950/80 backdrop-blur-md px-2 py-1 rounded-lg border border-slate-700 text-[10px] text-slate-300 flex items-center gap-1.5">
+                    <i class="fa-solid fa-expand text-amber-400"></i> Click to Zoom
+                  </div>
+                </div>
+
+                <!-- Snapshot Location Badge -->
+                <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot text-amber-400 text-base"></i>
+                    <div>
+                      <p class="font-bold text-white">Territory: Kumalankuttai</p>
+                      <p class="text-[10px] text-slate-400">Arterial Hub, Erode Corporation</p>
+                    </div>
+                  </div>
+                  <a href="#location-dossier" class="text-[11px] font-bold text-amber-400 hover:text-white underline">
+                    Read Profile &rarr;
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section id="statsSection" class="py-8 bg-slate-950 border-y border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="p-3 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <div class="text-3xl font-extrabold text-amber-400 font-mono stat-number" data-target="80000" data-suffix="+">80,000+</div>
+          <p class="text-xs text-slate-300 font-semibold mt-1">Daily Commuters on Highway</p>
+          <span class="text-[10px] text-slate-500 uppercase tracking-wider">Perundurai Road</span>
+        </div>
+
+        <div class="p-3 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <div class="text-3xl font-extrabold text-emerald-400 font-mono stat-number" data-target="14" data-suffix=" Acres">14 Acres</div>
+          <p class="text-xs text-slate-300 font-semibold mt-1">Kumalankuttai Lake Protected</p>
+          <span class="text-[10px] text-slate-500 uppercase tracking-wider">Freshwater Reservoir</span>
+        </div>
+
+        <div class="p-3 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <div class="text-3xl font-extrabold text-blue-400 font-mono stat-number" data-target="100" data-suffix="%">100%</div>
+          <p class="text-xs text-slate-300 font-semibold mt-1">Smart Solar LED Lighting</p>
+          <span class="text-[10px] text-slate-500 uppercase tracking-wider">Zero Dark Spots</span>
+        </div>
+
+        <div class="p-3 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <div class="text-3xl font-extrabold text-amber-300 font-mono stat-number" data-target="24" data-suffix="/7">24/7</div>
+          <p class="text-xs text-slate-300 font-semibold mt-1">Stewardship Desk Active</p>
+          <span class="text-[10px] text-slate-500 uppercase tracking-wider">Office of Yaashwanth</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       DEEP LOCATION DOSSIER: KUMALANKUTTAI, ERODE
+       ========================================================================= -->
+  <section id="location-dossier" class="py-20 relative bg-slate-950/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-amber-500/10 text-amber-400 border border-amber-500/30">
+          LOCATION BLUEPRINT & GEOGRAPHY
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+          Kumalankuttai, Erode: The Strategic Geographic Nexus
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          An in-depth territorial study of Kumalankuttai — the irreplaceable gateway connecting Erode city centre with the Kongu industrial corridor, stewarded by Yaashwanth.
+        </p>
+      </div>
+
+      <!-- 3-Column Geographic Breakdown -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Etymology & History of Kumalankuttai -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-slate-800 hover-lift space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl border border-amber-500/20">
+            <i class="fa-solid fa-monument"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Etymology & Historical Roots</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The name <strong>Kumalankuttai</strong> (குமலன்குட்டை) derives from Kongu Tamil roots: <em>"Kuttai"</em> designates a natural freshwater catchment pond or lake reservoir, and <em>"Kumalan"</em> denotes the historic chieftain or benefactor family who maintained the water sanctuary for agriculture and regional travelers.
+          </p>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Once a lush water haven on the royal bullock-cart trade route between Erode and Coimbatore, it has now grown into a bustling metropolitan commercial artery while preserving its ecological lake at its heart.
+          </p>
+          <div class="pt-3 border-t border-slate-800/80 text-[11px] text-amber-400 font-semibold flex items-center gap-1.5">
+            <i class="fa-solid fa-water"></i> Preserved & revitalized under Yaashwanth
+          </div>
+        </div>
+
+        <!-- Card 2: Strategic Highway Arterial (Perundurai Road SH-96) -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-blue-500/30 hover-lift space-y-4 shadow-xl">
+          <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl border border-blue-500/20">
+            <i class="fa-solid fa-route"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">The Perundurai Road Corridor</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Kumalankuttai sits squarely on <strong>State Highway 96 (Perundurai Road)</strong>. This is not just a road; it is the economic spine of Erode district, carrying textile traders, students, hospital emergencies, and commercial cargo around the clock.
+          </p>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            It acts as the primary conduit between the dense retail textile markets of Erode Central and the massive manufacturing belt of <strong>Perundurai SIPCOT & NH-544 (Salem-Coimbatore Expressway)</strong>.
+          </p>
+          <div class="pt-3 border-t border-slate-800/80 text-[11px] text-blue-400 font-semibold flex items-center gap-1.5">
+            <i class="fa-solid fa-traffic-light"></i> Kumalankuttai Main Signal: 80k+ commuters/day
+          </div>
+        </div>
+
+        <!-- Card 3: Four-Point Cardinal Boundaries -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-emerald-500/30 hover-lift space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl border border-emerald-500/20">
+            <i class="fa-solid fa-compass"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">4-Point Territorial Boundaries</h3>
+          <div class="space-y-2.5 text-xs">
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-amber-400 font-bold uppercase text-[10px] block">North Boundary</span>
+              <span class="text-slate-200">Sampath Nagar & District Collectorate Enclave</span>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-amber-400 font-bold uppercase text-[10px] block">South Boundary</span>
+              <span class="text-slate-200">Rangampalayam & Southern Railway Feeder</span>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-amber-400 font-bold uppercase text-[10px] block">East Boundary</span>
+              <span class="text-slate-200">Erode Central Railway Junction & Bus Terminal (~3.8 km)</span>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-amber-400 font-bold uppercase text-[10px] block">West Boundary</span>
+              <span class="text-slate-200">Thindal Murugan Temple & Perundurai SIPCOT</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Deep Geographic Facts Infographic Grid -->
+      <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-slate-900 border border-amber-500/30 shadow-2xl">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div>
+            <h4 class="text-lg font-bold text-white font-heading">Kumalankuttai Geographic Specification Matrix</h4>
+            <p class="text-xs text-amber-400 font-mono">OFFICIAL REGISTRATION DATA &bull; OWNER: YAASHWANTH</p>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30">
+            PIN: 638011
+          </span>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-6 text-xs">
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+            <span class="text-[10px] text-slate-500 uppercase font-bold block">District</span>
+            <span class="font-bold text-white text-sm">Erode</span>
+            <span class="text-[10px] text-slate-400 block mt-0.5">Tamil Nadu</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+            <span class="text-[10px] text-slate-500 uppercase font-bold block">Taluk</span>
+            <span class="font-bold text-white text-sm">Erode Taluk</span>
+            <span class="text-[10px] text-slate-400 block mt-0.5">Revenue Division</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+            <span class="text-[10px] text-slate-500 uppercase font-bold block">Municipality</span>
+            <span class="font-bold text-white text-sm">Erode Corp.</span>
+            <span class="text-[10px] text-slate-400 block mt-0.5">Smart City Zone</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+            <span class="text-[10px] text-slate-500 uppercase font-bold block">Topography</span>
+            <span class="font-bold text-white text-sm">Deccan Plateau</span>
+            <span class="text-[10px] text-slate-400 block mt-0.5">Altitude 183m</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+            <span class="text-[10px] text-slate-500 uppercase font-bold block">Climate</span>
+            <span class="font-bold text-white text-sm">Semi-Arid</span>
+            <span class="text-[10px] text-slate-400 block mt-0.5">Kongu Breeze</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+            <span class="text-[10px] text-slate-500 uppercase font-bold block">Patron & Owner</span>
+            <span class="font-bold text-amber-400 text-sm">Yaashwanth</span>
+            <span class="text-[10px] text-slate-400 block mt-0.5">Chief Custodian</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       THE CUSTODIAN: YAASHWANTH'S PERSONAL & LEADERSHIP PORTFOLIO
+       ========================================================================= -->
+  <section id="about-yaashwanth" class="py-20 bg-[#050A18] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-amber-500/10 text-amber-400 border border-amber-500/30">
+          LEADERSHIP PROFILE
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+          Yaashwanth — The Custodian & Visionary
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Discover the 3 dimensions of Yaashwanth's stewardship: Visionary Leadership, Ground Presence in Kumalankuttai, and Hands-on Software Engineering for Smart Civic Governance.
+        </p>
+      </div>
+
+      <!-- 3-Image Triad Portfolio Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Image Card 1: Close-Up Portrait -->
+        <div class="rounded-3xl bg-slate-900 border border-amber-500/40 p-5 flex flex-col justify-between shadow-2xl group hover-lift">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[3/4]">
+              <img src="assets/images/yaashwanth-closeup.png" 
+                   alt="Yaashwanth — Charismatic Visionary & Patron of Kumalankuttai" 
+                   class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500 lightbox-trigger cursor-pointer">
+              <div class="absolute bottom-2 left-2 bg-slate-950/85 backdrop-blur-md px-2 py-0.5 rounded text-[10px] text-amber-300 font-mono">
+                <i class="fa-solid fa-crown mr-1"></i> Visionary Patron
+              </div>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase font-bold text-amber-400 tracking-wider">Dimension 01</span>
+              <h3 class="text-xl font-bold text-white">Visionary Leadership</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mt-1">
+                Approachable, dynamic, and passionately committed to uplifting Kumalankuttai into Erode's model commercial and residential district. Yaashwanth leads with clear intent and transparency.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs text-amber-400 font-semibold flex items-center justify-between">
+            <span>Public Stewardship</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Image Card 2: Full Standing Portrait -->
+        <div class="rounded-3xl bg-slate-900 border border-slate-800 p-5 flex flex-col justify-between shadow-2xl group hover-lift">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[3/4]">
+              <img src="assets/images/yaashwanth-portrait.jpg" 
+                   alt="Yaashwanth on-site inspecting civic and infrastructure development in Kumalankuttai" 
+                   class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500 lightbox-trigger cursor-pointer">
+              <div class="absolute bottom-2 left-2 bg-slate-950/85 backdrop-blur-md px-2 py-0.5 rounded text-[10px] text-emerald-400 font-mono">
+                <i class="fa-solid fa-person-walking mr-1"></i> Ground Custodian
+              </div>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase font-bold text-emerald-400 tracking-wider">Dimension 02</span>
+              <h3 class="text-xl font-bold text-white">On-Site Ground Presence</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mt-1">
+                Frequently walking the cross-streets of Kumalankuttai, inspecting road resurfacing, reviewing the lake rejuvenation works, and listening directly to residents and business proprietors.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs text-emerald-400 font-semibold flex items-center justify-between">
+            <span>Direct Citizen Connect</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Image Card 3: Tech Command Workstation with Geotag -->
+        <div class="rounded-3xl bg-slate-900 border border-blue-500/40 p-5 flex flex-col justify-between shadow-2xl group hover-lift">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[3/4]">
+              <img src="assets/images/yaashwanth-workspace.png" 
+                   alt="Yaashwanth at the tech command workstation in Perundurai-Erode regional corridor" 
+                   class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500 lightbox-trigger cursor-pointer">
+              <div class="absolute bottom-2 left-2 bg-slate-950/85 backdrop-blur-md px-2 py-0.5 rounded text-[10px] text-blue-300 font-mono">
+                <i class="fa-solid fa-terminal mr-1"></i> Lat 11.27755° Long 77.575277°
+              </div>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase font-bold text-blue-400 tracking-wider">Dimension 03</span>
+              <h3 class="text-xl font-bold text-white">Civic Tech & Engineering</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mt-1">
+                Coding and deploying automated grievance management, streetlight IoT monitoring, and geospatial tracking directly from the workstation in the Perundurai-Erode tech corridor.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs text-blue-400 font-semibold flex items-center justify-between">
+            <span>Software-Driven Ward</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Executive Message Quote -->
+      <div class="mt-12 p-8 rounded-3xl bg-slate-900/80 border border-amber-500/30 relative overflow-hidden">
+        <i class="fa-solid fa-quote-left text-amber-500/20 text-6xl absolute top-4 left-6 pointer-events-none"></i>
+        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-4">
+          <p class="text-lg sm:text-xl font-serif italic text-slate-200 leading-relaxed">
+            "Kumalankuttai is not merely a geographic point on Erode's map — it is our heritage, our bustling commercial front door, and our collective home. As its owner and custodian, my pledge is to ensure modern technology, clean environment, and transparent services touch every single life in this area."
+          </p>
+          <div class="flex items-center justify-center gap-3">
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-amber-400">
+              <img src="assets/images/yaashwanth-closeup.png" alt="Yaashwanth" class="w-full h-full object-cover">
+            </div>
+            <div class="text-left">
+              <h4 class="text-sm font-bold text-amber-400 font-heading">YAASHWANTH</h4>
+              <p class="text-[11px] text-slate-400">Owner, Patron & Custodian &bull; Kumalankuttai, Erode</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       KEY LANDMARKS OF KUMALANKUTTAI
+       ========================================================================= -->
+  <section id="landmarks" class="py-20 bg-slate-950/70 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+          TERRITORY EXPLORER
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+          Key Landmarks in Kumalankuttai
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          From historic water reservoirs to bustling highway signals and premier healthcare enclaves.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Landmark 1: Kumalankuttai Lake -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-emerald-500/30 hover-lift space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/80 px-2.5 py-0.5 rounded border border-emerald-500/30">
+              WATER SANCTUARY
+            </span>
+            <button class="focus-map-btn text-xs text-emerald-400 hover:text-white" data-landmark="lake">
+              <i class="fa-solid fa-crosshairs mr-1"></i> Locate
+            </button>
+          </div>
+          <h4 class="text-lg font-bold text-white">The Historic Kumalankuttai Lake</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The eponymous lake spanning over 14 acres. Under Yaashwanth's green sanctuary initiative, it features bio-remediation aerators, native saplings, and an 800m jogging promenade.
+          </p>
+          <div class="pt-2 text-[11px] text-slate-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-map-pin text-emerald-400"></i> Lake Bund Road, Kumalankuttai
+          </div>
+        </div>
+
+        <!-- Landmark 2: Kumalankuttai Central Junction -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-amber-500/30 hover-lift space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-950/80 px-2.5 py-0.5 rounded border border-amber-500/30">
+              HIGHWAY CROSSROADS
+            </span>
+            <button class="focus-map-btn text-xs text-amber-400 hover:text-white" data-landmark="junction">
+              <i class="fa-solid fa-crosshairs mr-1"></i> Locate
+            </button>
+          </div>
+          <h4 class="text-lg font-bold text-white">Kumalankuttai Central Signal</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The prime four-way intersection on Perundurai Road handling transit flow between Erode Railway Junction, Thindal, Sampath Nagar, and outer highways.
+          </p>
+          <div class="pt-2 text-[11px] text-slate-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-map-pin text-amber-400"></i> Perundurai Road SH-96
+          </div>
+        </div>
+
+        <!-- Landmark 3: Lotus Multispeciality Hospital Zone -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-red-500/30 hover-lift space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-red-400 bg-red-950/80 px-2.5 py-0.5 rounded border border-red-500/30">
+              HEALTHCARE CORRIDOR
+            </span>
+            <button class="focus-map-btn text-xs text-red-400 hover:text-white" data-landmark="hospital">
+              <i class="fa-solid fa-crosshairs mr-1"></i> Locate
+            </button>
+          </div>
+          <h4 class="text-lg font-bold text-white">Lotus Multispeciality Hospital Zone</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Leading tertiary medical institution providing 24/7 emergency response, cardiac care, and surgical specialties right within Kumalankuttai limits.
+          </p>
+          <div class="pt-2 text-[11px] text-slate-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-map-pin text-red-400"></i> Perundurai Rd, Kumalankuttai
+          </div>
+        </div>
+
+        <!-- Landmark 4: Yaashwanth Executive Headquarters -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-amber-500/40 hover-lift space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-300 bg-amber-950/80 px-2.5 py-0.5 rounded border border-amber-500/30">
+              COMMAND CENTER & RESIDENCE
+            </span>
+            <button class="focus-map-btn text-xs text-amber-300 hover:text-white" data-landmark="estate">
+              <i class="fa-solid fa-crosshairs mr-1"></i> Locate
+            </button>
+          </div>
+          <h4 class="text-lg font-bold text-white">Office & Residence of Yaashwanth</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The official headquarters and residence of the Area Custodian for Kumalankuttai management, citizen grievance reception, and urban infrastructure coordination.
+          </p>
+          <div class="pt-2 text-[11px] text-slate-300 space-y-1">
+            <p class="flex items-center gap-1.5"><i class="fa-solid fa-house-chimney text-amber-400"></i> 77, Kumalankuttai, Selvam Nagar 5th Street, Erode - 638011</p>
+            <p class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-emerald-400"></i> <a href="tel:+918072446763" class="hover:text-amber-400 font-mono font-bold">+91 8072 446 763</a></p>
+          </div>
+        </div>
+
+        <!-- Landmark 5: Youth Tech & Innovation Hub -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-blue-500/30 hover-lift space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-blue-400 bg-blue-950/80 px-2.5 py-0.5 rounded border border-blue-500/30">
+              DIGITAL EMPOWERMENT
+            </span>
+            <button class="focus-map-btn text-xs text-blue-400 hover:text-white" data-landmark="techhub">
+              <i class="fa-solid fa-crosshairs mr-1"></i> Locate
+            </button>
+          </div>
+          <h4 class="text-lg font-bold text-white">Youth Tech Innovation Lab</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by Yaashwanth to equip regional youth with high-demand software engineering, coding, and competitive exams guidance at no cost.
+          </p>
+          <div class="pt-2 text-[11px] text-slate-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-map-pin text-blue-400"></i> North Ward Complex, Kumalankuttai
+          </div>
+        </div>
+
+        <!-- Landmark 6: Collectorate Administrative Gateway -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-purple-500/30 hover-lift space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-purple-400 bg-purple-950/80 px-2.5 py-0.5 rounded border border-purple-500/30">
+              DISTRICT CIVIC LINK
+            </span>
+            <button class="focus-map-btn text-xs text-purple-400 hover:text-white" data-landmark="collectorate">
+              <i class="fa-solid fa-crosshairs mr-1"></i> Locate
+            </button>
+          </div>
+          <h4 class="text-lg font-bold text-white">District Collectorate Gateway</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The immediate cutoff road connecting Kumalankuttai with Erode's District Collectorate, government courts, and Sampath Nagar administrative offices.
+          </p>
+          <div class="pt-2 text-[11px] text-slate-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-map-pin text-purple-400"></i> Sampath Nagar Link Road
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE GEOSPATIAL MAP (LEAFLET.JS)
+       ========================================================================= -->
+  <section id="mapSection" class="py-20 bg-slate-900/60 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-blue-500/10 text-blue-400 border border-blue-500/30">
+            GEOGRAPHIC GIS GRID
+          </span>
+          <h2 class="text-3xl font-heading font-extrabold text-white mt-2">
+            Interactive Kumalankuttai Perimeter Map
+          </h2>
+          <p class="text-slate-400 text-sm mt-1">
+            Highlighted territory boundary with active pins. Click any button below to smoothly pan to the landmark.
+          </p>
+        </div>
+
+        <!-- Quick Focus Landmark Buttons -->
+        <div class="flex flex-wrap gap-1.5 text-xs">
+          <button class="focus-map-btn px-2.5 py-1 rounded-lg bg-slate-800 text-amber-400 font-bold border border-slate-700 hover:bg-slate-700" data-landmark="junction">Main Signal</button>
+          <button class="focus-map-btn px-2.5 py-1 rounded-lg bg-slate-800 text-emerald-400 font-bold border border-slate-700 hover:bg-slate-700" data-landmark="lake">Lake</button>
+          <button class="focus-map-btn px-2.5 py-1 rounded-lg bg-slate-800 text-amber-300 font-bold border border-slate-700 hover:bg-slate-700" data-landmark="estate">Yaashwanth HQ</button>
+          <button class="focus-map-btn px-2.5 py-1 rounded-lg bg-slate-800 text-red-400 font-bold border border-slate-700 hover:bg-slate-700" data-landmark="hospital">Lotus Hospital</button>
+          <button class="focus-map-btn px-2.5 py-1 rounded-lg bg-slate-800 text-blue-400 font-bold border border-slate-700 hover:bg-slate-700" data-landmark="techhub">Tech Lab</button>
+        </div>
+      </div>
+
+      <!-- Map Display Container -->
+      <div class="p-3 rounded-2xl bg-slate-950 border border-amber-500/30 shadow-2xl">
+        <div id="kumalankuttaiMap"></div>
+      </div>
+
+      <div class="mt-4 flex flex-wrap items-center justify-between text-xs text-slate-400 px-2">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full border-2 border-amber-400 bg-amber-400/20"></span>
+          <span>Golden Outline: Official Kumalankuttai Area Perimeter Boundary</span>
+        </div>
+        <div class="font-mono text-amber-400">
+          Grid Coordinates: 11.3325° N, 77.7120° E
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE TRANSIT MATRIX & DISTANCE CALCULATOR
+       ========================================================================= -->
+  <section id="transit" class="py-20 relative bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Connectivity Overview -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-amber-500/10 text-amber-400 border border-amber-500/30">
+            CONNECTIVITY & TRANSIT
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+            Unbeatable Connectivity Across Tamil Nadu
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            One of the greatest location advantages of Kumalankuttai is its direct access to major transit backbones without suffering the congestion of the inner city bazaar.
+          </p>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Whether commuting to the Coimbatore airport, traveling via Erode Railway Junction, or hauling freight to the Perundurai SIPCOT manufacturing hub, Kumalankuttai puts you ahead of the journey.
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 text-xs pt-2">
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+              <span class="text-amber-400 font-bold block mb-1"><i class="fa-solid fa-train"></i> Erode Railway Junction</span>
+              <p class="text-slate-400">Only 4.2 km &bull; Major Southern Railway junction with trains to Chennai, Bangalore, Kerala & North India.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+              <span class="text-emerald-400 font-bold block mb-1"><i class="fa-solid fa-plane-departure"></i> Coimbatore Airport</span>
+              <p class="text-slate-400">88 km &bull; Seamless high-speed transit via NH-544 6-lane express highway corridor.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Travel Time Calculator -->
+        <div class="lg:col-span-6">
+          <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 border border-amber-500/40 shadow-2xl space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+              <h3 class="text-base font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-calculator text-amber-400"></i> Kumalankuttai Transit Calculator
+              </h3>
+              <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-500/30">
+                LIVE METRICS
+              </span>
+            </div>
+
+            <div>
+              <label for="transitSelect" class="block text-xs font-semibold text-slate-300 mb-2">Select Destination from Kumalankuttai:</label>
+              <select id="transitSelect" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-amber-400">
+                <option value="station">Erode Railway Junction (ED)</option>
+                <option value="busstand">Erode Central Bus Terminal</option>
+                <option value="collectorate">District Collectorate & Courts</option>
+                <option value="sipcot">Perundurai SIPCOT & NH-544</option>
+                <option value="cbe-airport">Coimbatore International Airport (CJB)</option>
+                <option value="bhavani">Bhavani Sangameshwarar Confluence</option>
+              </select>
+            </div>
+
+            <!-- Calculated Transit Display injected via JS -->
+            <div id="transitResult"></div>
+
+            <p class="text-[11px] text-slate-500 text-center pt-2">
+              <i class="fa-solid fa-clock-rotate-left mr-1 text-amber-400"></i> Measured under standard traffic conditions monitored by Yaashwanth area telemetry.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CITIZEN GRIEVANCE & AREA HELP
+       ========================================================================= -->
+  <section id="grievance" class="py-20 relative bg-slate-900/50 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-amber-500/10 text-amber-400 border border-amber-500/30">
+          RESPONSIVE CUSTODIANSHIP
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+          Citizen Desk & Area Grievance Portal
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Report civic issues or submit location recommendations directly to the Office of Yaashwanth.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Form -->
+        <div class="lg:col-span-7 rounded-3xl bg-slate-950 border border-slate-800 p-6 sm:p-8 shadow-2xl">
+          <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-file-signature text-amber-400"></i> Lodge a Petition or Recommendation
+          </h3>
+
+          <form id="grievanceForm" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="citizenName" class="block text-xs font-semibold text-slate-300 mb-1">Your Name *</label>
+                <input type="text" id="citizenName" required placeholder="Full Name" 
+                       class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400">
+              </div>
+
+              <div>
+                <label for="citizenPhone" class="block text-xs font-semibold text-slate-300 mb-1">Phone Number *</label>
+                <input type="tel" id="citizenPhone" required placeholder="Mobile Number" 
+                       class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="grievanceCategory" class="block text-xs font-semibold text-slate-300 mb-1">Category *</label>
+                <select id="grievanceCategory" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400">
+                  <option value="Smart Streetlighting">Streetlighting & Solar LED</option>
+                  <option value="Road Maintenance & Pothole Filling">Roads & Highway Potholes</option>
+                  <option value="Cleanliness & Solid Waste Segregation">Sanitation & Lake Protection</option>
+                  <option value="Drinking Water & Pipeline">Water Supply Line</option>
+                  <option value="General Area Suggestion">General Suggestion to Yaashwanth</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="grievanceLocation" class="block text-xs font-semibold text-slate-300 mb-1">Location in Kumalankuttai *</label>
+                <input type="text" id="grievanceLocation" required placeholder="e.g. Near Lake Promenade / 2nd Cross" 
+                       class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400">
+              </div>
+            </div>
+
+            <div>
+              <label for="grievanceDesc" class="block text-xs font-semibold text-slate-300 mb-1">Description *</label>
+              <textarea id="grievanceDesc" rows="3" required placeholder="Details of your request..." 
+                        class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400"></textarea>
+            </div>
+
+            <button type="submit" class="px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 text-slate-950 shadow-md shadow-amber-500/20 transition flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Dispatch Petition</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Track Status -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="rounded-3xl bg-slate-950 border border-amber-500/30 p-6 shadow-2xl">
+            <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-magnifying-glass-location text-amber-400"></i> Track Petition Token
+            </h3>
+            <div class="flex gap-2">
+              <input type="text" id="trackingTicketInput" placeholder="Token (e.g. KKI-2026-1042)" 
+                     class="flex-1 px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-700 font-mono text-xs uppercase text-amber-400 focus:outline-none focus:border-amber-400">
+              <button id="trackGrievanceBtn" class="px-4 py-2 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs hover:bg-amber-400 transition">
+                Track
+              </button>
+            </div>
+            <div class="mt-2 text-[11px] text-slate-400">
+              Try sample: <button type="button" onclick="document.getElementById('trackingTicketInput').value='KKI-2026-1042'; document.getElementById('trackGrievanceBtn').click();" class="text-amber-300 underline">KKI-2026-1042</button>
+            </div>
+            <div id="trackingResult"></div>
+          </div>
+
+          <div class="p-5 rounded-3xl bg-slate-950 border border-slate-800 text-xs space-y-2">
+            <h4 class="font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-building-user text-amber-400"></i> Area Headquarters & Residence
+            </h4>
+            <p class="text-slate-300">77, Kumalankuttai, Selvam Nagar 5th Street, Erode - 638011, Tamil Nadu.</p>
+            <p class="text-amber-400 font-mono font-bold"><i class="fa-solid fa-phone text-emerald-400 mr-1.5"></i><a href="tel:+918072446763" class="hover:underline">+91 8072 446 763</a></p>
+            <p class="text-slate-400">Public Visiting Hours: Mon–Sat, 10:00 AM – 1:00 PM</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONNECT WITH YAASHWANTH & CONTACT
+       ========================================================================= -->
+  <section id="contact" class="py-20 bg-[#050A18]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-amber-500/40 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-4">
+            <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-amber-500/10 text-amber-400 border border-amber-500/30">
+              DIRECT SECRETARIAT
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+              Connect with Yaashwanth
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              For civic representations, commercial investment proposals in Kumalankuttai, or youth skill development partnerships — connect directly with the office or call the official direct line.
+            </p>
+
+            <div class="space-y-3 pt-2 text-xs sm:text-sm text-slate-300">
+              <p class="flex items-start gap-2.5">
+                <i class="fa-solid fa-location-dot text-amber-400 w-5 mt-1"></i>
+                <span><strong>Official Residence & Office:</strong> 77, Kumalankuttai, Selvam Nagar 5th Street, Erode - 638011, Tamil Nadu</span>
+              </p>
+              <p class="flex items-center gap-2.5">
+                <i class="fa-solid fa-phone text-emerald-400 w-5"></i>
+                <span><strong>Direct Line / Mobile:</strong> <a href="tel:+918072446763" class="font-mono font-bold text-amber-400 text-base hover:underline">+91 8072 446 763</a></span>
+              </p>
+              <p class="flex items-center gap-2.5">
+                <i class="fa-solid fa-envelope text-amber-400 w-5"></i>
+                <span class="font-mono">yaashwanth@kumalankuttai-erode.org</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col gap-3">
+            <a href="tel:+918072446763" 
+               class="w-full py-4 px-6 rounded-2xl font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 text-slate-950 shadow-xl shadow-amber-500/20 transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-phone-volume text-sm"></i>
+              <span>Call +91 8072 446 763</span>
+            </a>
+
+            <a href="https://wa.me/918072446763?text=Hello%20Yaashwanth,%20regarding%20Kumalankuttai%20location." target="_blank" 
+               class="w-full py-4 px-6 rounded-2xl font-bold text-xs uppercase tracking-wider bg-emerald-700/80 hover:bg-emerald-600 text-white border border-emerald-500/40 shadow-xl transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-base text-emerald-300"></i>
+              <span>WhatsApp Direct (+91 8072 446 763)</span>
+            </a>
+
+            <button class="open-appointment-modal w-full py-3.5 px-6 rounded-2xl font-bold text-xs uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-500/30 transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-calendar-check text-sm"></i>
+              <span>Book Appointment with Yaashwanth</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800 text-xs text-slate-400 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 pb-6 border-b border-slate-800/80">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm">
+            Y
+          </div>
+          <div>
+            <h5 class="text-sm font-bold text-white font-heading">YAASHWANTH &bull; KUMALANKUTTAI</h5>
+            <p class="text-[11px] text-slate-300">77, Kumalankuttai, Selvam Nagar 5th Street, Erode - 638011 &bull; Ph: <a href="tel:+918072446763" class="text-amber-400 font-mono hover:underline font-bold">+91 8072 446 763</a></p>
+          </div>
+        </div>
+
+        <div class="text-[11px] font-mono text-slate-400">
+          GPS Grid: 11.3325° N, 77.7120° E &bull; Elevation: 183m
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+        <p>&copy; 2026 Yaashwanth. Official Kumalankuttai Location Portfolio.</p>
+        <div class="flex items-center gap-3">
+          <a href="#hero" class="hover:text-amber-400 transition">Back to Top</a>
+          <span>&bull;</span>
+          <a href="#location-dossier" class="hover:text-amber-400 transition">Location Dossier</a>
+          <span>&bull;</span>
+          <a href="#mapSection" class="hover:text-amber-400 transition">Geographic Map</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS
+       ========================================================================= -->
+
+  <!-- Grievance Receipt Modal -->
+  <div id="receiptModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-3xl bg-slate-900 border border-amber-500/40 p-6 shadow-2xl">
+      <div class="text-center space-y-2 mb-4">
+        <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto text-xl border border-emerald-500/30">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h4 class="text-lg font-bold text-white font-heading">Petition Logged</h4>
+        <p class="text-xs text-slate-400">Dispatched to the Office of Yaashwanth</p>
+      </div>
+
+      <div id="receiptDetails" class="p-4 rounded-2xl bg-slate-950 border border-slate-800"></div>
+
+      <div class="mt-4 flex gap-2">
+        <button onclick="document.getElementById('receiptModal').classList.add('hidden')" class="w-full py-2.5 rounded-xl bg-amber-500 text-xs font-bold text-slate-950 hover:bg-amber-400 transition">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Appointment Modal -->
+  <div id="appointmentModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-3xl bg-slate-900 border border-amber-500/40 p-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+        <div>
+          <h4 class="text-lg font-bold text-white font-heading">Connect with Yaashwanth</h4>
+          <p class="text-xs text-amber-400">Owner & Custodian &bull; Kumalankuttai, Erode</p>
+        </div>
+        <button id="closeAppointmentModal" class="text-slate-400 p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="appointmentForm" class="space-y-3 text-xs">
+        <div>
+          <label class="block text-slate-300 font-semibold mb-1">Your Name</label>
+          <input type="text" required placeholder="Full Name" class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-amber-400">
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-slate-300 font-semibold mb-1">Phone</label>
+            <input type="tel" required placeholder="Mobile" class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-amber-400">
+          </div>
+          <div>
+            <label class="block text-slate-300 font-semibold mb-1">Email</label>
+            <input type="email" required placeholder="Email" class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-amber-400">
+          </div>
+        </div>
+        <div>
+          <label class="block text-slate-300 font-semibold mb-1">Purpose</label>
+          <select class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-amber-400">
+            <option>Location & Commercial Property Discussion</option>
+            <option>Civic Infrastructure Proposal</option>
+            <option>Youth Skill & Tech Partnership</option>
+            <option>Personal Meeting</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-slate-300 font-semibold mb-1">Message</label>
+          <textarea rows="3" required placeholder="Describe your topic..." class="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-amber-400"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold text-xs uppercase tracking-wider hover:from-amber-400 transition">
+          Submit Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div id="imageLightbox" class="hidden fixed inset-0 z-50 flex flex-col items-center justify-center p-4 bg-slate-950/95 backdrop-blur-md">
+    <button id="closeLightbox" class="absolute top-6 right-6 text-slate-300 hover:text-white text-2xl p-2 rounded-full bg-slate-800/80 border border-slate-700">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-4xl max-h-[85vh] p-2 rounded-2xl border border-amber-500/40 bg-slate-900 shadow-2xl flex flex-col items-center">
+      <img id="lightboxImage" src="" alt="Enlarged View" class="max-h-[70vh] w-auto object-contain rounded-xl">
+      <p id="lightboxCaption" class="mt-3 text-sm font-semibold text-amber-300 text-center px-4"></p>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Main Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
